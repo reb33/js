@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        //явное приведение можеть быть в строку, число, булево значение
+
+        console.log(String(true)); //"true"
+        console.log(String(2)); //"2"
+        console.log(String(null)); //"null"
+        console.log(String(NaN)); //"NaN"
+        String(undefined); //"undefined"
+
+        console.log(Number("4")); //4
+        console.log(Number("4.3")); //4.3
+        console.log(Number("4,3")); //NaN
+        console.log(Number("hello")); //NaN
+        console.log(Number(true)); //1
+        console.log(Number(false)); //0
+        console.log(Number(null)); //0
+        console.log(Number("")); //0
+        Number(undefined);//NaN
+
+        console.log(Boolean("hello world")); //true
+        console.log(Boolean(1)); //true
+        console.log(Boolean(0)); //false
+        console.log(Boolean("")); //false
+        console.log(Boolean(null)); //false
+        console.log(Boolean(undefined)); //false
+        console.log(Boolean(NaN)); //false
+        Boolean(Infinity);//true
+        Boolean(-Infinity);//true
+    </script>
+</body>
+</html>

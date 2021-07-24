@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+
+        /**
+         * Функция возводит число в квадрат.
+         * @param {string} num 
+         * @throws {Error} если передано не число будет выброшена ошибка.
+         * @returns {number}
+         */
+        function getSquare(num) {
+            if (num === "") {
+                throw new Error("Вы ничего не ввели");
+            }
+            if (num === null) {
+                throw new Error("вы нажали отмена");
+            }
+            num = Number(num);
+            if (isNaN(num)) {
+                throw new Error("вы ввели не корректное значение");
+            }
+
+            return num * num;
+        }
+
+        let myNum = prompt("введите число");
+        alert(getSquare(myNum));
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict";
+
+        if (true) {
+            var a = 4;
+        }  
+        
+        /* как в строгом, так и не в строгом режиме переменная в этом 
+        примере будет свойством объекта window */
+        
+        console.log(a); //4
+        console.log(window.a); //4
+    </script>
+</body>
+</html>

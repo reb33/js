@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // "use strict";
+
+        if (true) {
+            //в строгом режиме
+            //Uncaught ReferenceError: a is not defined
+            a = 7;
+        }
+
+        //в нестрогом режиме console.log() отработает как обычно
+        console.log(a);    
+        console.log(window.a);
+    </script>
+</body>
+</html>

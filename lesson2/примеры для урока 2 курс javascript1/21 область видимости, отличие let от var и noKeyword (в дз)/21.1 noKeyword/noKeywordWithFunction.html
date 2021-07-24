@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict";
+
+        function hello() {
+            //в строгом режиме
+            //Uncaught ReferenceError: a is not defined
+            a = 3;
+        }
+        hello(); //функция ничего не делает, но вызвана, чтобы
+        //проинициализировалась переменная
+
+        //в нестрогом режиме console.log() отработает как обычно
+        console.log(a); //3
+        console.log(window.a); //3
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict";    
+        
+        function showWords(first, second, ...other) {
+            console.log('первое слово: ' + first);
+            console.log('второе слово: ' + second);
+            console.log('остальные слова: ' + other); //три,четыре,пять
+            console.dir(other); //['три', 'четыре', 'пять']
+        }
+
+        showWords('один', 'два', 'три', 'четыре', 'пять');
+    </script>
+</body>
+</html>
