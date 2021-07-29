@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        /* Перед вами два массива, получите значения, которые есть
+        в обоих массивах. */
+        const arr1 = ['jane', 'alex', 'ivan', 'john', 'sam', 'joel', 'max'];
+        const arr2 = ['evgeniy', 'alex', 'peth', 'john', 'vasiliy', 'joel', 'semen'];
+        
+        const intersection = arr1.filter(function(name) {
+            return arr2.includes(name);
+        });
+        console.log(intersection);
+    </script>
+    
+    
+</body>
+</html>

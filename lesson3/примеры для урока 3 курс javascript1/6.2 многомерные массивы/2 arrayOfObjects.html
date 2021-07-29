@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Массив объектов</title>
+</head>
+<body>
+    <script>
+        "use strict";
+
+        //это массив объектов
+        let users = [
+            { name: "Петр", age: 30 },
+            { name: "Иван", age: 25 },
+            { name: "Федор", age: 29 },
+        ];
+
+        /* 
+        Array(3)
+            0: {name: "Петр", age: 30}
+            1: {name: "Иван", age: 25}
+            2: {name: "Федор", age: 29}
+            length: 3
+        */
+        console.log(users);
+        
+        console.log(users[1]); //{name: "Иван", age: 25}
+        
+        console.log(users[0].name); //Петр
+
+        console.log(users[2]["age"]); //29
+        console.log(users[2].age); //29
+
+    </script>
+</body>
+</html>

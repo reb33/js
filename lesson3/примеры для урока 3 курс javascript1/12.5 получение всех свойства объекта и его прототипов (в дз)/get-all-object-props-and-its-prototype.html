@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+
+        let array = [13, 1235, 15, 123, 51];
+
+        /**
+         * Функция возвращает массив всех свойств объекта: перечислимых,
+         * не перечислимых и тех что в цепочке прототипов.
+         * @param {Object} o
+         * @returns {Array}
+         * @see https://mzl.la/2JeeVVF этот пример на mdn
+         * @see https://mzl.la/32CWfpQ метод concat
+         */
+        function listAllProperties(o) {
+            let objectToInspect;
+            let result = [];
+
+            for (objectToInspect = o; objectToInspect !== null; objectToInspect = Object.getPrototypeOf(objectToInspect)) {
+                result = result.concat(Object.getOwnPropertyNames(objectToInspect));
+            }
+
+            return result;
+        }
+        console.log(listAllProperties(array));
+    </script>
+</body>
+
+</html>

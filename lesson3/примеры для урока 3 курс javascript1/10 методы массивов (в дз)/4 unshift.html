@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict";
+
+        let usersId = [123155, 879588, 32300000];
+        /* Метод unshift() добавляет один или более 
+        элементов в начало массива и возвращает 
+        новую длину массива.
+        См. https://mzl.la/2Fwqh77 */
+        let newArrLength = usersId.unshift(11111);
+        console.log(newArrLength); //4
+        console.log(usersId); //[11111, 123155, 879588, 32300000]
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        'use strict';
+        /* Перед вами массив с пользователями, используя метод map создайте новый
+        массив, в котором появится префикс к фамилии Mr. или Mrs. в зависимости
+        от пола пользователя, например для объекта:
+        {
+            surname: 'Campbell',
+            gender: 'male',
+        },
+        результат будет:
+        {
+            surname: 'Campbell',
+            gender: 'male',
+            appeal: 'Mr'
+        },
+        */
+
+        const users = [
+            {
+                surname: 'Campbell',
+                gender: 'male',
+            },
+            {
+                surname: 'Blythe',
+                gender: 'female',
+            },
+            {
+                surname: 'Morton',
+                gender: 'male',
+            },
+            {
+                surname: 'Adler',
+                gender: 'female',
+            },
+            {
+                surname: 'Cruz',
+                gender: 'male',
+            },
+        ];
+
+        const usersWithAppeal = users.map(function(user) {
+            if (user.gender === 'male') {
+                return Object.assign({}, user, {appeal: 'Mr'});
+            }
+            return Object.assign({}, user, {appeal: 'Mrs'});
+        });
+
+        console.log(users);
+        console.log(usersWithAppeal);
+    </script>
+</body>
+</html>

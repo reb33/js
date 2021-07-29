@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        
+        const user = {
+            id: 3,
+            age: 25,
+            name: "John",
+        };
+
+        for (let property in user) {
+            console.log(property);
+        }
+        /* 
+        выводятся названия свойств:
+        id
+        age
+        name
+        */
+
+        for (let property in user) {
+            console.log(user[property]);
+
+            // console.log(user.property); 
+            /* это не верно, результатом
+            будет undefined, т.к. у объекта user нет св-ва property */
+        }
+        /* 
+        вывод:
+        3
+        25
+        John
+        */
+    </script>
+</body>
+</html>

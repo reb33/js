@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict";
+
+        /* Метод find() возвращает значение первого найденного 
+        в массиве элемента, которое удовлетворяет условию
+        переданному в callback функции.  В противном случае
+        возвращается undefined.
+        См. https://mzl.la/2Q4MXiJ */
+        
+        let prices = [53, 107, 81, 45, 35];
+        let lessThan50 = prices.find(function(price) {
+            return price < 50;
+        });
+        
+        console.log(lessThan50); //45
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        // Сделайте чтобы каждое слово в str1 было с заглавной буквы
+        const str1 = 'lorem ipsum dolor sit amet consectetur adipisicing elit';
+        
+        const arrayOfWords = str1.split(' ');
+        let result = arrayOfWords.map(function(word) {
+            let letters = word.split('');
+            letters[0] = letters[0].toUpperCase();
+            return letters.join('');
+        });
+        result = result.join(' ');
+        console.log(result);
+    </script>
+</body>
+</html>

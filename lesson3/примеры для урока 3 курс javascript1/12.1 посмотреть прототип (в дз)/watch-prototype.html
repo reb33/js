@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        
+        const myArr = [9, 3, 4];
+
+        // свойство __proto__ появилось в стандарте EcmaScript 2015 (ES6)
+        console.log(myArr.__proto__);
+
+        // используйте метод Object.getPrototypeOf если нужно поддерживать
+        // и старые браузеры
+        console.log(Object.getPrototypeOf(myArr));
+
+
+        const date = new Date();
+        console.log(date.__proto__);
+
+        /* мы можем увидет какие методы предоставляет объект Date */
+        console.log(date.getFullYear());
+        console.log(date.getTime());
+    </script>
+</body>
+</html>

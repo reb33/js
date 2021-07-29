@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Итерирование по массиву с помощью forEach</title>
+</head>
+<body>
+    <script>
+        "use strict";
+
+        let images = [
+            "1.jpg",
+            "2.jpg",
+            "3.jpg",
+        ];
+
+        images.forEach(function(element, index, array) {
+            console.log(element, index, array);
+        });
+        /* 
+        вывод:
+        1.jpg 0 ["1.jpg", "2.jpg", "3.jpg"]
+        2.jpg 1 ["1.jpg", "2.jpg", "3.jpg"]
+        3.jpg 2 ["1.jpg", "2.jpg", "3.jpg"]
+        */
+
+
+        images.forEach(function(element) {
+           console.log(element);
+        });
+        /* 
+        вывод:
+        1.jpg
+        2.jpg
+        3.jpg
+        */
+    </script>
+</body>
+</html>

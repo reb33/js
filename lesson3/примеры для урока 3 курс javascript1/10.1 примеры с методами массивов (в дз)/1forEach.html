@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Найдите максимальное число в массиве, используя метод forEach
+
+    <script>
+        'use strict';
+        let numbers = [3, 700, 304, 29, 1073, 142];
+        let maxNumber = numbers[0];
+        numbers.forEach(function(number) {
+            if (number > maxNumber) {
+                maxNumber = number;
+            }
+        });
+        console.log(maxNumber);
+    </script>
+</body>
+</html>

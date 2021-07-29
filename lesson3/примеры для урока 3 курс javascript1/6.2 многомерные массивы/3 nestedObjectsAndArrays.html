@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Вложенные объекты и массивы</title>
+</head>
+<body>
+    <script>
+        "use strict";
+
+        let user = {
+            name: "John",
+            id: 4,
+            socialNetworks: {
+                vk: "https://vk.com/john",
+                facebook: "https://facebook.com/john"
+            },
+            images: [
+                "1.jpg",
+                "2.svg",
+                "3.gif",
+            ]
+        };
+        console.log(user);
+
+        console.log(user.name); //John
+
+        //{vk: "https://vk.com/john", facebook: "https://facebook.com/john"}
+        console.log(user.socialNetworks);
+
+        console.log(user.socialNetworks.vk); //https://vk.com/john
+
+        console.log(user.images);// ["1.jpg", "2.svg", "3.gif"]
+
+        console.log(user.images[1]); //2.svg
+    </script>
+</body>
+</html>

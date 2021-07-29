@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Оператор in</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        
+        const user = {
+            name: 'John',
+            age: 36
+        };
+        console.log("age" in user); //true
+        console.log("surname" in user); //false
+
+        /* здесь не понятно то ли свойства surname не существует, то ли оно
+        есть, но равно undefined */
+        console.log(user.surname === undefined); //true даже если свойство отсутствует
+        console.log("surname" in user); //false, оператор in точно говорит что такого свойства нет
+
+        function nothing() {
+
+        }
+        user.surname = nothing();
+        console.log(user.surname); //undefined, т.к. функция nothing ничего не вернула
+        console.log("surname" in user); //true, но такое свойство существует
+
+        //вывод: предпочитайте оператор in, а не проверку на undefined
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict";
+
+        /* Метод filter() создаёт новый массив со всеми элементами,
+        прошедшими проверку, задаваемую в передаваемой функции.
+        См. https://mzl.la/2qROQkT */
+
+        let clients = ["Василий", "Семён", "Екатерина", "Владимир", "Валентина"];
+        let vLetterClients = clients.filter(function(element) {
+            return element.charAt(0) == "В";
+            /* если функция возвращает true, то переданный элемент
+            попадет в новый массив, если false, то нет. */
+        });
+
+        //["Василий", "Владимир", "Валентина"]
+        console.log(vLetterClients);
+
+        //["Василий", "Семён", "Екатерина", "Владимир", "Валентина"]
+        console.log(clients);
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Итерирование по массиву с помощью for of</title>
+</head>
+<body>
+    <script>
+        "use strict";
+
+        let values = ["один", "два", "три"];
+        
+        for (let value of values) {
+            console.log(value);
+        }
+
+        /* в выводе окажутся значения индексов массива:
+        один
+        два
+        три
+        */
+
+
+        /* let someObj = {
+            num1: 1,
+            num2: 2,
+            num3: 3,
+        };
+        // Uncaught TypeError: someObj is not iterable
+        for (let key of someObj) {
+           console.log(key); 
+        } */
+
+        /* не используйте цикл for of для итерации по объекту */
+    </script>
+</body>
+</html>
