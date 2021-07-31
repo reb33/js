@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+
+        // это базовый объект, на основе которого мы будем создавать производные объекты
+        const post_parent = {
+            role: 'user', // автор по умолчанию будет user
+            userName: null, // имени по умолчанию не будет
+            showRole: function () {
+                console.log(this.role);
+            }
+        };
+
+        // создаем первый пост
+        //Object.create создает новый пустой объект, прототипом которого является объект переданный в скобках
+        let post1_child = Object.create(post_parent);
+        post1_child.userName = "Alex";
+
+        // выведется "user", причем это значение будет не в post1_child, а в прототипе post_parent,
+        // в объекте post1_child нет свойства role
+        console.log(post1_child.role); 
+        //или тоже самое, но через вызов метода
+        post1_child.showRole();
+
+        /* 
+        post1_child:
+            userName: "Alex"
+            __proto__:
+                role: "user"
+                showRole: ƒ ()
+                userName: null
+         */
+        console.log(post1_child); // 
+
+
+        let post2 = Object.create(post_parent);
+        post2.userName = "John";
+        post2.role = "admin";
+        
+        console.log(post2.role);
+        //тоже самое, но через вызов метода
+        post2.showRole();
+
+        console.log(post2);
+    </script>
+</body>
+
+</html>

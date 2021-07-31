@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        
+        function UserRole() {
+            this.rights = ['create', 'edit'];
+
+            /* у вновь создаваемого объекта прототипом будет объект, который
+            находится в UserRole.prototype, в данном случае это просто пустой объект */
+            //this.__proto__ = UserRole.prototype
+        }
+
+        const userRole1 = new UserRole();
+        // debugger;
+        console.log(userRole1.__proto__ === UserRole.prototype); //true
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+
+        /* 
+        Можно es6 код привести к es5 с помощью babel:
+        https://babeljs.io/repl
+        */
+
+        /* 
+        Классы поддерживаются всеми современными браузерами, кроме IE
+        https://kangax.github.io/compat-table/es6/#test-class
+        */
+
+        class Person {
+            constructor(name, age, gender) {
+                this.name = name;
+                this.age = age;
+                this.gender = gender;
+            }
+
+            incrementAge() {
+                this.age += 1;
+            }
+        }
+
+        const person1 = new Person('Alex', 25, 'male');
+        console.log(person1);
+        person1.incrementAge();
+        debugger;
+
+
+
+        class Personal extends Person {
+            constructor(name, age, gender, location, hobby) {
+                super(name, age, gender);
+                this.location = location;
+                this.hobby = hobby;
+            }
+
+            sayName() {
+                console.log('My name is: ' + this.name);
+            }
+        }
+
+        const personal1 = new Personal('John', 30, 'male', 'Canada', 'swimming');
+        console.log(personal1);
+        personal1.sayName();
+        debugger;
+        personal1.incrementAge();
+        debugger;
+    </script>
+</body>
+
+</html>

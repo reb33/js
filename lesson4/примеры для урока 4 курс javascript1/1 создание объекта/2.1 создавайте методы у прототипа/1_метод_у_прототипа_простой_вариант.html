@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        let transport = {
+            color: 'grey',
+            showColor: function() {
+                alert('Транспорт цвета: ' + this.color);
+            }
+        };
+
+        function Car(model, color) {
+            this.model = model;
+            this.color = color;
+        }
+
+        Car.prototype = transport;
+
+        const car1 = new Car('Ford', 'blue');
+        const car2 = new Car('Toyota', 'white');
+        car1.showColor();//blue
+        car2.showColor();//white
+    </script>
+</body>
+</html>

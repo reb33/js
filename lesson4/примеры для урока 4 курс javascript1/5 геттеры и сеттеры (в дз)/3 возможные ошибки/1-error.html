@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+
+        class User {
+            constructor(name, surname) {
+                this.name = name;
+                this.surname = surname;
+            }
+
+            get fullName() {
+                return this.name + ' ' + this.surname;
+            }
+        }
+
+        const user1 = new User('Alex', 'Smith');
+        debugger;
+        
+        /* Uncaught TypeError: Cannot set property fullName of
+        #<User> which has only a getter */
+        user1.fullName = 'John Doe';
+    </script>
+</body>
+
+</html>

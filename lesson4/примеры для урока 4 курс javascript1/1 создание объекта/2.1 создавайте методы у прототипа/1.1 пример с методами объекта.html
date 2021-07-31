@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+
+        function Car(model, color) {
+            this.model = model;
+            this.color = color;
+        }
+
+        Car.prototype.showColor = function () {
+            alert('Транспорт цвета: ' + this.color);
+        };
+        Car.prototype.move = function () {
+            alert('Транспорт модели ' + this.model + ' едет');
+        };
+        Car.prototype.changeColor = function (color) {
+            this.color = color;
+            alert('Теперь транспорт цвета: ' + this.color);
+        };
+
+        const car1 = new Car('Ford', 'blue');
+        const car2 = new Car('Toyota', 'white');
+        car1.showColor();//blue
+        car2.showColor();//white
+
+        car1.move();
+        car2.changeColor('red');
+    </script>
+</body>
+
+</html>

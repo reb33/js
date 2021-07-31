@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+
+        function Post(author, text) {
+            //здесь this это вновь создаваемый объект
+            this.author = author;
+            this.text = text;
+
+            /* так методы стоит создавать только если у вас кода мало,
+            если будет генерироваться много объектов, то у каждого объекта
+            будет свой метод show (такой же как и все другие, у аналогичных
+            методов) и это будет неэкономное расходование памяти. */
+            this.show = function() {
+                alert(this.author + " say: " + this.text);
+            };
+        }
+
+        const post1 = new Post('Admin', 'lorem ipsum1');
+        console.log(post1.author);
+        console.log(post1.text);
+        post1.show();
+
+        const post2 = new Post('User', 'hello world');
+        console.log(post2.author);
+        console.log(post2.text);
+        post2.show();
+    </script>
+</body>
+
+</html>

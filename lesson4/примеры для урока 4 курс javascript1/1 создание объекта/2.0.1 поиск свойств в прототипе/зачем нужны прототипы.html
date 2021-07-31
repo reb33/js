@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        let transport = {
+            model: null,
+            color: 'grey',
+            move: function() {
+                alert(`Текущий транспорт модели ${this.model} движется.`);
+            }
+        };
+
+        function Car(model) {
+            this.model = model;
+            //т.к. в прототипе уже есть этот метод, то здесь нам не надо
+            //его дублировать
+            /* this.move = function() {
+                alert(`Текущий транспорт модели ${this.model} движется.`);
+            }; */
+        }
+
+        Car.prototype = transport;
+
+        const car2 = new Car('Toyota');
+        car2.move();
+    </script>
+</body>
+</html>

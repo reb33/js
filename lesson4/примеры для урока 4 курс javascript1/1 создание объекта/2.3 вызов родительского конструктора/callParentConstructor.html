@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict";
+
+        function UserRole() {
+            this.rights = ['create', 'edit'];
+            //this.__proto__ = UserRole.prototype
+        }
+
+        function ModerRole() {
+            this.name = 'Alex';
+            this.age = 30;
+            UserRole.call(this);
+            this.rights.push('delete');
+            //this.__proto__ = ModerRole.prototype
+        }
+
+        function AdminRole() {
+            ModerRole.call(this);
+            this.rights.push('ban');
+        }
+
+        const moderRole1 = new ModerRole();
+        debugger;
+        console.log(moderRole1.__proto__ === ModerRole.prototype); //true
+    </script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+
+        function Person(name, age, gender) {
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+            //this.__proto__ = Person.prototype, в данном случае просто
+            //пустой объект Object
+        }
+
+        Person.prototype.incrementAge = function () {
+            this.age += 1;
+        };
+
+        const person1 = new Person('Alex', 20, 'male');
+        debugger;
+        person1.incrementAge();
+        debugger;
+
+        function Personal(name, age, gender, location, hobby) {
+            Person.call(this, name, age, gender);
+            this.location = location;
+            this.hobby = hobby;
+            //this.__proto__ = Personal.prototype
+        }
+
+
+
+        /*
+        До присваивания в Personal.prototype лежит:
+        Object
+            constructor: ƒ Personal(name, age, gender, location, hobby)
+            __proto__: Object
+
+
+
+        А мы присваиваем туда:
+        Person
+            __proto__:
+                constructor: ƒ Person(name, age, gender)
+                __proto__: Object
+
+        Такое присваивание мы делаем для целей наследования, т.к. в Person.prototype
+        у нас лежит например метод incrementAge и хотим им пользоваться в объектах
+        типа Personal
+        */
+        Personal.prototype = Object.create(Person.prototype);
+
+
+
+        /* 
+        До присваивания в Personal.prototype.constructor лежит:
+        Person(name, age, gender) {
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+            //this.__proto__ = Person.prototype, т.е. Object
+        }
+        т.к. мы выше явно сказали что прототипом будет экземпляр Person.prototype,
+        а у этого объекта конструктором был Person
+
+
+
+        Поэтому мы явно говорим, что объекты Personal.prototype будут создаваться
+        с помощью:
+        Personal(name, age, gender, location, hobby) {
+            Person.call(this, name, age, gender);
+            this.location = location;
+            this.hobby = hobby;
+            this.__proto__ = Personal.prototype, т.е. Object
+        */
+        Personal.prototype.constructor = Personal;
+
+        // мы можем добавить новое поведение
+        Personal.prototype.sayName = function() {
+            console.log('My name is: ' + this.name);
+        };
+
+        // мы можем переопределить базовое поведение этого метода
+        // Personal.prototype.incrementAge = function () {
+        //     this.age += 5;
+        // };
+
+        const personal = new Personal('John', 30, 'male', 'Canada', 'swimming');
+        debugger;
+        personal.incrementAge();
+        debugger;
+        personal.sayName();
+        debugger;
+    </script>
+</body>
+
+</html>

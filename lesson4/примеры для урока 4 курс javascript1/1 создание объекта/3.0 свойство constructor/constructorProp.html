@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        
+        function User(age) {
+            this.age = age;
+        }
+
+        const user1 = new User(25);
+
+        /* Свойство constructor - возвращает ссылку на функцию, 
+        создавшую объект. Свойство constructor находится в прототипе
+        созданного объекта. */
+
+        /* выведет:
+        User(age) {
+            this.age = age;
+        }
+        */
+        console.log(user1.constructor);
+
+        const user2 = new user1.constructor(30);
+        console.log(user2);
+
+        console.log(user1.hasOwnProperty('constructor')); //false
+        console.log(user1.__proto__.hasOwnProperty('constructor')); //true
+        debugger;
+    </script>
+</body>
+</html>
