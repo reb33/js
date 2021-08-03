@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+<div>
+    Lorem ipsum dolor sit.
+    <p>
+        Lorem ipsum dolor sit amet consectetur.
+        <button>кнопка</button>
+    </p>
+</div>
+
+<script>
+    "use strict";
+    
+    document.querySelector('button').addEventListener('click', function (event) {
+        console.log(event);
+        console.log(event.currentTarget);
+        console.log(event.target);
+    });
+    
+    document.querySelector('p').addEventListener('click', function (event) {
+        console.log(event);
+        console.log(event.currentTarget);
+        console.log(event.target);
+    });
+
+    document.querySelector('div').addEventListener('click', function (event) {
+        console.log(event);
+        console.log(event.currentTarget);
+        console.log(event.target);
+    });
+</script>
+</body>
+
+</html>

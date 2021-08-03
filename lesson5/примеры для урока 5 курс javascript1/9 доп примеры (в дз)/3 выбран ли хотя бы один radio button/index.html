@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <input type="radio" name="test">
+        <input type="radio" name="test">
+        <input type="radio" name="test">
+
+        <button>Проверить</button>
+
+        <script>
+            'use strict';
+            const inputs = document.querySelectorAll('input');
+            const button = document.querySelector('button');
+
+            button.addEventListener('click', checkRadios);
+
+            function checkRadios() {
+                inputs.forEach(function(input) {
+                    console.log(input.checked);
+                });
+            }
+        </script>
+    </body>
+</html>

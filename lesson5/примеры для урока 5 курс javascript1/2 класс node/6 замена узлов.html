@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Lorem ipsum dolor sit amet consectetur.
+    </p>
+
+    <script>
+        "use strict";
+        
+        let p = document.querySelector('p');
+        let h2 = document.createElement('h2');
+        h2.innerText = "hello world";
+                    //newChild, oldChild
+        p.parentNode.replaceChild(h2, p);
+    </script>
+</body>
+</html>

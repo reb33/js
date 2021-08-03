@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .attention {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>
+        Lorem ipsum dolor sit amet.
+    </h1>
+    <button>Удалить</button>
+
+    <script>
+        "use strict";
+        
+        let h1 = document.querySelector('h1');
+        h1.classList.add('attention');
+
+        document
+            .querySelector('button')
+            .addEventListener('click', function() {
+                h1.classList.remove('attention');
+            });
+    </script>
+</body>
+</html>

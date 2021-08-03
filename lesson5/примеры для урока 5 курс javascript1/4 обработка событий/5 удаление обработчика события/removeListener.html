@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<button class="checkEvent">Кнопка проверки события</button>
+<button class="switchOff">Выключить обработку события</button>
+
+<script>
+    "use strict";
+    
+    /* если вы планируете удалять обработчик события, то вы должны
+    его выделить в отдельную функцию и передавать ее как переменную,
+    чтобы в памяти была ссылка только на одну конкретную функцию.
+    А иначе при кликах будут создаваться несколько анонимных (безымянных)
+    функций в памяти. */
+
+    let clickFunction = function (event) {
+        console.log(event);
+    };
+
+    let checkEvent = document.querySelector('.checkEvent');
+    checkEvent.addEventListener('click', clickFunction);
+
+    let switchOff = document.querySelector('.switchOff');
+    switchOff.addEventListener('click', function() {
+        checkEvent.removeEventListener('click', clickFunction);
+    });
+</script>
+</body>
+</html>

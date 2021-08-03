@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .warning {
+            color: orange;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn btn-large">
+        btn
+    </button>
+
+    <script>
+        "use strict";
+        
+        let button = document.querySelector('button');
+        console.log(button.classList);
+        console.log(button.className);
+
+        button.classList.add('warning');
+        button.classList.remove('btn');
+        button.classList.toggle('btn-large');
+        button.classList.toggle('btn-large');
+        console.log(button.classList.contains('warning'));//true
+    </script>
+</body>
+</html>

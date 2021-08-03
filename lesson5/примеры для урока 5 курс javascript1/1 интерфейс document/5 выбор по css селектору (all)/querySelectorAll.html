@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<form action="/feedback">
+    <input type="text" value="один">
+    <input type="password" value="два">
+    <button>Send</button>
+</form>
+
+<script>
+    "use strict";
+    let inputs = document.querySelectorAll('form[action="/feedback"] input');
+
+    //NodeList
+    console.log(inputs);
+
+    for (let i = 0; i < inputs.length; i++) {
+        console.log(inputs[i].value);
+    }
+
+    inputs.forEach(function(input) {
+        console.log(input.type);
+    });
+</script>
+</body>
+</html>

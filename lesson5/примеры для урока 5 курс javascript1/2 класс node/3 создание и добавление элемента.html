@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        текст в диве
+    </div>
+
+    <script>
+        "use strict";
+
+        let paragraph = document.createElement('p');
+        //appendChild добавляет элемент перед закрывающим тегом родителя
+        document.body.appendChild(paragraph);
+        paragraph.innerText = "hello world";
+
+        let div = document.querySelector('div');
+        let h2 = document.createElement('h2');
+        h2.innerText = "текст в заголовке";
+        //можно вставлять одни теги в другие
+        div.appendChild(h2);
+    </script>
+</body>
+</html>

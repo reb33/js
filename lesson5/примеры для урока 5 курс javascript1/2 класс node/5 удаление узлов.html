@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Lorem, ipsum dolor.
+    </p>
+    <h2>Lorem, ipsum.</h2>
+    <ul>
+        <li>one</li>
+        <li>one</li>
+    </ul>
+
+    <script>
+        "use strict";
+        
+        let list = document.querySelector('ul');
+        //удаление относительно родителя
+        list.parentNode.removeChild(list);
+
+
+        //более простой способ
+        let h2 = document.querySelector('h2');
+        h2.remove();
+    </script>
+</body>
+</html>

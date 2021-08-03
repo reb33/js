@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<div class="product">
+    <div class="productName">Товар 1</div>
+    <img src="https://placeimg.com/200/200/animals" alt="товар 1">
+    <button>купить</button>
+</div>
+
+<script>
+    "use strict";
+    
+    //подробнее здесь https://mzl.la/2BubUfo
+
+    //получение родительского узла (parentNode)
+    let productName = document.querySelector('.productName');
+    console.log(productName.parentNode);
+
+    //получение всех дочерних узлов, включая текстовые (childNodes)
+    let product = document.querySelector('.product');
+    console.log(product.childNodes);
+
+    //получение только дочерних тегов, исключая текстовые узлы и комментарии
+    console.log(product.children);
+</script>
+</body>
+</html>

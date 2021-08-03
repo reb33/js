@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div class="product" data-lang="russian">
+        Lorem ipsum dolor sit.
+    </div>
+
+    <script>
+        "use strict";
+        
+        let product = document.querySelector('.product');
+        console.log(product.getAttribute('data-lang'));
+        console.log(product.getAttribute('class'));
+        product.setAttribute('id', 'first');
+    </script>
+</body>
+</html>

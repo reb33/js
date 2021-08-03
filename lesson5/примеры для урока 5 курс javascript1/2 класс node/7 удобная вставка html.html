@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- beforebegin -->
+    <button>
+        <!-- afterbegin -->
+        Кнопка
+        <!-- beforeend -->
+    </button>
+    <!-- afterend -->
+
+<div>
+    
+</div>
+
+<script>
+    "use strict";
+    
+    let button = document.querySelector('button');
+    /* разбирает указанный текст как HTML или XML и вставляет 
+    полученные узлы (nodes) в DOM дерево в указанную позицию. */
+    button.insertAdjacentHTML("beforebegin", "<u>hello</u>");
+
+    let div = document.querySelector('div');
+
+    let productName = 'Товар 1';
+    let productImgUrl = 'https://picsum.photos/200/300';
+    let productPrice = 123123;
+
+    let productMarkup = `
+        <div>${productName}</div>
+        <img src="${productImgUrl}" alt="${productName}">
+        <div class="price">${productPrice}</div>
+    `;
+    div.insertAdjacentHTML("afterbegin", productMarkup);
+
+    //https://developer.mozilla.org/ru/docs/Web/API/Element/insertAdjacentHTML
+
+    let p = document.createElement('p');
+    p.innerText = 'paragraph';
+    button.insertAdjacentElement("beforebegin", p);
+</script>
+</body>
+</html>

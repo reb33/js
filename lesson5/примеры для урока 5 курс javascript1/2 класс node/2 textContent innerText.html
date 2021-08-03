@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+<div>
+    Hello <span style="display: none;">World</span>
+</div>
+
+<script>
+    "use strict";
+    
+    let div = document.querySelector('div');
+
+    //показывает только текст фактически видимый глазу на странице
+    console.log(div.innerText);
+
+    //показывает текст целиком
+    console.log(div.textContent);
+    
+    //удаляем пробельные символы
+    console.log(div.textContent.trim());
+
+    //меняем содержимое тега
+    div.textContent = "Всем привет";
+</script>
+</body>
+
+</html>

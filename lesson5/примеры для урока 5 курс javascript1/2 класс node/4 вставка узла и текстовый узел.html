@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <button>Кнопка</button>
+
+    <script>
+        "use strict";
+
+        //createTextNode возвращает объект, представляющий текстовый узел
+        let hello = document.createTextNode("hello world");
+        //Метод Node.insertBefore() добавляет элемент в  
+        //список дочерних элементов родителя перед указанным элементом.
+        document.body.insertBefore(hello, document.querySelector('button'));
+    </script>
+</body>
+</html>
