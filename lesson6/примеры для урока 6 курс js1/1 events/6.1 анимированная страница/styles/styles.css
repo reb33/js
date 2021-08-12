@@ -1,0 +1,411 @@
+@font-face {
+  font-family: SocialIco;
+  src: url("../fonts/Socialico.ttf");
+}
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: #ccc;
+  font-family: Arial, sans-serif;
+}
+h1,
+ul {
+  margin: 0;
+}
+.container {
+  width: 1280px;
+  margin: 0 auto;
+}
+.pageHeader {
+  min-height: 223px;
+  background: #445161;
+  padding: 50px;
+  box-sizing: border-box;
+}
+.pageHeader:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+.pageHeader .productName,
+.pageHeader .headerList {
+  width: 55%;
+}
+.pageHeader .productName {
+  float: left;
+  color: #ffffff;
+  font-size: 60px;
+  font-weight: 400;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+}
+.pageHeader .headerProductImg {
+  background: #ffffff;
+  width: 469px;
+  height: 214px;
+  float: right;
+}
+.pageHeader .headerList {
+  float: left;
+  list-style: inside url("../images/check_icon.png");
+  padding-left: 0;
+  margin-top: 28px;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 36px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+}
+.aboutProduct {
+  padding: 50px;
+  box-sizing: border-box;
+}
+.aboutProduct:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+.aboutProduct .aboutProductHeader {
+  color: #445161;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 36px;
+}
+.aboutProduct .aboutProductImg {
+  background: #445161;
+  width: 430px;
+  height: 245px;
+  float: right;
+}
+.aboutProduct .aboutProductHeader,
+.aboutProduct .aboutDesc1,
+.aboutProduct .aboutDesc2 {
+  max-width: 710px;
+  float: left;
+}
+.aboutProduct .aboutDesc1,
+.aboutProduct .aboutDesc2 {
+  color: #445161;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-top: 15px;
+}
+.dignityAndPluses {
+  padding: 50px;
+  box-sizing: border-box;
+  background: #f5f5f5;
+  padding-bottom: 15px;
+}
+.dignityAndPluses:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+.dignityAndPluses .dignityAndPlusesHeader {
+  color: #445161;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: center;
+  margin-bottom: 35px;
+}
+.dignityAndPluses .pluses {
+  width: 100%;
+  float: left;
+  list-style: none;
+  padding-left: 0;
+  color: #445161;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.dignityAndPluses .pluses li {
+  width: 50%;
+  float: left;
+  background: url("../images/plus_icon.gif") no-repeat left 5px;
+  padding: 0 15px 0 40px;
+  box-sizing: border-box;
+  text-align: justify;
+  margin-bottom: 35px;
+}
+.screenshots {
+  padding: 50px;
+  box-sizing: border-box;
+}
+.screenshots:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+.screenshots .screenshotsHeader {
+  color: #445161;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: center;
+}
+.screenshots .screenshotUnit {
+  color: #445161;
+  width: 50%;
+  float: left;
+  padding: 30px 16px 0 0;
+  box-sizing: border-box;
+}
+.screenshots .screenshotUnit .screenshotImg {
+  background: #445161;
+  float: left;
+  margin-right: 15px;
+  width: 200px;
+  height: 150px;
+}
+.screenshots .screenshotUnit .screenshotUnitHead {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+}
+.screenshots .screenshotUnit .screenshotDesc {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.reviews {
+  padding: 50px;
+  box-sizing: border-box;
+  background: #f5f5f5;
+}
+.reviews:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+.reviews .reviewsHeader {
+  color: #445161;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: center;
+}
+.reviews .reviewUnit {
+  width: 50%;
+  float: left;
+  padding: 20px 15px 0 0;
+  box-sizing: border-box;
+}
+.reviews .reviewUnit .reviewImg {
+  border-radius: 50%;
+  background: #445161;
+  width: 75px;
+  height: 75px;
+  float: left;
+}
+.reviews .reviewUnit .review {
+  position: relative;
+  color: #445161;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 18px;
+  float: right;
+  width: 468px;
+  background: #ebebeb;
+  padding: 16px;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.reviews .reviewUnit .review::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: -10px;
+  top: 27px;
+  background: #ebebeb;
+  transform: rotate(45deg);
+}
+.reviews .reviewUnit .review .reviewAuthor {
+  color: #989898;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+.buyItNow {
+  padding: 50px;
+  box-sizing: border-box;
+}
+.buyItNow .buyItNowHeader {
+  color: #445161;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.buyItNow .buyUnits {
+  width: 990px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.buyItNow .buyUnits .buyUnit {
+  width: 298px;
+  background: #445161;
+  border-radius: 4px;
+  border: 2px solid #445161;
+}
+.buyItNow .buyUnits .buyUnit .buyTariff {
+  padding: 17px;
+  box-sizing: border-box;
+  text-align: center;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+}
+.buyItNow .buyUnits .buyUnit .buyUnitPrice {
+  text-align: center;
+  padding: 18px;
+  box-sizing: border-box;
+  color: #445161;
+  background: #ffffff;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 30px;
+}
+.buyItNow .buyUnits .buyUnit .buyUnitText {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.buyItNow .buyUnits .buyUnit .buyBtn {
+  border-radius: 4px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 14px;
+  box-sizing: border-box;
+  background: #ffffff;
+  color: #445161;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  display: block;
+  margin: 20px;
+  text-decoration: none;
+}
+footer .contacts {
+  padding: 50px;
+  box-sizing: border-box;
+  background: #445161;
+}
+footer .contacts:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+footer .contacts .contactsHeader {
+  color: #445161;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 36px;
+  color: #ffffff;
+  text-align: center;
+}
+footer .contacts .contactsContent {
+  width: 785px;
+  margin: 30px auto 0 auto;
+}
+footer .contacts .contactsContent .inputs {
+  float: left;
+}
+footer .contacts .contactsContent .inputs input[type="text"],
+footer .contacts .contactsContent .inputs textarea {
+  display: block;
+  width: 500px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 21px;
+  padding: 7px 5px;
+  box-sizing: border-box;
+  color: #445161;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  outline: none;
+}
+footer .contacts .contactsContent .inputs textarea {
+  font-family: Arial, sans-serif;
+  min-height: 170px;
+}
+footer .contacts .contactsContent .inputs input[type="submit"] {
+  border-radius: 5px;
+  background-color: #ffffff;
+  width: 140px;
+  height: 40px;
+  text-align: center;
+  color: #445161;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  border: none;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+  outline: none;
+}
+footer .contacts .contactsContent .contactsList {
+  float: left;
+  margin-left: 45px;
+}
+footer .contacts .contactsContent .contactsList > div {
+  margin-bottom: 15px;
+}
+footer .contacts .contactsContent .contactsList .skype,
+footer .contacts .contactsContent .contactsList .icq,
+footer .contacts .contactsContent .contactsList .email,
+footer .contacts .contactsContent .contactsList .phone {
+  padding-left: 30px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+}
+footer .contacts .contactsContent .contactsList .skype {
+  background: url("../images/skype_icon.png") no-repeat left center;
+}
+footer .contacts .contactsContent .contactsList .icq {
+  background: url("../images/icq_icon.png") no-repeat left center;
+}
+footer .contacts .contactsContent .contactsList .email {
+  background: url("../images/email_icon.png") no-repeat left center;
+}
+footer .contacts .contactsContent .contactsList .phone {
+  background: url("../images/phone_icon.png") no-repeat left center;
+}
+footer .contacts .contactsContent .contactsList .socialIcons {
+  margin-top: 30px;
+  font-family: SocialIco, sans-serif;
+  color: #ffffff;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 24px;
+}
+footer .copy {
+  height: 26px;
+  text-align: center;
+  color: #445161;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  line-height: 26px;
+  background: #f5f5f5;
+}
+.hidden {
+  opacity: 0;
+}
+.visible {
+  opacity: 1;
+}

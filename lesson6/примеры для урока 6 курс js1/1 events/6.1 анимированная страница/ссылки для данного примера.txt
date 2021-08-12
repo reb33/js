@@ -1,0 +1,10 @@
+Сами анимации
+	https://daneden.github.io/animate.css/
+	https://github.com/animate-css/animate.css/tree/3.5.2
+
+Jquery
+	https://code.jquery.com/jquery-3.2.1.min.js
+
+Jquery-плагин viewport-checker
+	https://github.com/dirkgroenen/jQuery-viewport-checker
+	https://github.com/dirkgroenen/viewport-checker/tree/1.8.8

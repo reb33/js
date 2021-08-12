@@ -1,0 +1,447 @@
+@import "_variables";
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: #ccc;
+  font-family: Arial, sans-serif;
+}
+
+h1, ul {
+  margin: 0;
+}
+
+.container {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+.pageHeader {
+  min-height: 223px;
+  background: @darkColor;
+  .sectionStylesMixin();
+
+  &:after {
+    content: '';
+    clear: both;
+    display: block;
+  }
+
+  .productName,
+  .headerList {
+    width: 55%;
+  }
+
+  .productName {
+    float: left;
+    color: @lightColor;
+    font-size: 60px;
+    font-weight: 400;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  .headerProductImg {
+    background: @lightColor;
+    width: 469px;
+    height: 214px;
+    float: right;
+  }
+
+  .headerList {
+    float: left;
+    list-style: inside url("../images/check_icon.png");
+    padding-left: 0;
+    margin-top: 28px;
+    color: @lightColor;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 36px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+  }
+}
+
+.aboutProduct {
+  .sectionStylesMixin();
+
+  &:after {
+    content: '';
+    clear: both;
+    display: block;
+  }
+
+  .aboutProductHeader {
+    .sectionHeaderStylesMixin();
+  }
+
+  .aboutProductImg {
+    background: @darkColor;
+    width: 430px;
+    height: 245px;
+    float: right;
+  }
+
+  .aboutProductHeader,
+  .aboutDesc1,
+  .aboutDesc2 {
+    max-width: 710px;
+    float: left;
+  }
+
+  .aboutDesc1,
+  .aboutDesc2 {
+    color: @darkColor;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: 15px;
+  }
+}
+
+.dignityAndPluses {
+  .sectionStylesMixin();
+  background: @sectionLightBackColor;
+  padding-bottom: 15px;
+
+  &:after {
+    content: '';
+    clear: both;
+    display: block;
+  }
+
+  .dignityAndPlusesHeader {
+    .sectionHeaderStylesMixin();
+    text-align: center;
+    margin-bottom: 35px;
+  }
+
+  .pluses {
+    width: 100%;
+    float: left;
+    list-style: none;
+    padding-left: 0;
+    color: @darkColor;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+
+    li {
+      width: 50%;
+      float: left;
+      background: url("../images/plus_icon.gif") no-repeat left 5px;
+      padding: 0 15px 0 40px;
+      box-sizing: border-box;
+      text-align: justify;
+      margin-bottom: 35px;
+    }
+  }
+}
+
+.screenshots {
+  .sectionStylesMixin();
+
+  &:after {
+    content: '';
+    clear: both;
+    display: block;
+  }
+
+  .screenshotsHeader {
+    .sectionHeaderStylesMixin();
+    text-align: center;
+  }
+
+  .screenshotUnit {
+    color: @darkColor;
+    width: 50%;
+    float: left;
+    padding: 30px 16px 0 0;
+    box-sizing: border-box;
+
+    .screenshotImg {
+      background: @darkColor;
+      float: left;
+      margin-right: 15px;
+      width: 200px;
+      height: 150px;
+    }
+
+    .screenshotUnitHead {
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 30px;
+    }
+
+    .screenshotDesc {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+  }
+}
+
+.reviews {
+  .sectionStylesMixin();
+  background: #f5f5f5;
+
+  &:after {
+    content: '';
+    clear: both;
+    display: block;
+  }
+
+  .reviewsHeader {
+    .sectionHeaderStylesMixin();
+    text-align: center;
+  }
+
+  .reviewUnit {
+    width: 50%;
+    float: left;
+    padding: 20px 15px 0 0;
+    box-sizing: border-box;
+
+    .reviewImg {
+      border-radius: 50%;
+      background: @darkColor;
+      width: 75px;
+      height: 75px;
+      float: left;
+    }
+
+    @reviewBackColor: #ebebeb;
+    .review {
+      position: relative;
+      color: @darkColor;
+      font-size: 14px;
+      font-style: italic;
+      line-height: 18px;
+      float: right;
+      width: 468px;
+      background: @reviewBackColor;
+      padding: 16px;
+      box-sizing: border-box;
+      border-radius: 4px;
+
+      &::before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        left: -10px;
+        top: 27px;
+        background: @reviewBackColor;
+        transform: rotate(45deg);
+      }
+
+      .reviewAuthor {
+        color: #989898;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+      }
+    }
+  }
+}
+
+.buyItNow {
+  .sectionStylesMixin();
+
+  .buyItNowHeader {
+    .sectionHeaderStylesMixin();
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .buyUnits {
+    width: 990px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    .buyUnit {
+      width: 298px;
+      background: @darkColor;
+      border-radius: 4px;
+      border: 2px solid @darkColor;
+
+      .buyTariff {
+        padding: 17px;
+        box-sizing: border-box;
+        text-align: center;
+        color: @lightColor;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 30px;
+      }
+
+      .buyUnitPrice {
+        text-align: center;
+        padding: 18px;
+        box-sizing: border-box;
+        color: @darkColor;
+        background: @lightColor;
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 30px;
+      }
+
+      .buyUnitText {
+        color: @lightColor;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      .buyBtn {
+        border-radius: 4px;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 14px;
+        box-sizing: border-box;
+        background: @lightColor;
+        color: @darkColor;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 18px;
+        display: block;
+        margin: 20px;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+footer {
+
+  .contacts {
+    .sectionStylesMixin();
+    background: @darkColor;
+
+    &:after {
+      content: '';
+      clear: both;
+      display: block;
+    }
+
+    .contactsHeader {
+      .sectionHeaderStylesMixin();
+      color: @lightColor;
+      text-align: center;
+    }
+
+    .contactsContent {
+      width: 785px;
+      margin: 30px auto 0 auto;
+
+      .inputs {
+        float: left;
+
+        input[type="text"],
+        textarea {
+          display: block;
+          width: 500px;
+          border-radius: 5px;
+          border: none;
+          margin-bottom: 21px;
+          padding: 7px 5px;
+          box-sizing: border-box;
+          color: @darkColor;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          outline: none;
+        }
+
+        textarea {
+          font-family: Arial, sans-serif;
+          min-height: 170px;
+        }
+
+        input[type="submit"] {
+          border-radius: 5px;
+          background-color: @lightColor;
+          width: 140px;
+          height: 40px;
+          text-align: center;
+          color: @darkColor;
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 24px;
+          border: none;
+          display: block;
+          margin: 0 auto;
+          cursor: pointer;
+          outline: none;
+        }
+      }
+
+      .contactsList {
+        float: left;
+        margin-left: 45px;
+
+        & > div {
+          margin-bottom: 15px;
+        }
+
+        .skype,
+        .icq,
+        .email,
+        .phone {
+          padding-left: 30px;
+          color: @lightColor;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 28px;
+        }
+
+        .skype {
+          background: url("../images/skype_icon.png") no-repeat left center;
+        }
+
+        .icq {
+          background: url("../images/icq_icon.png") no-repeat left center;
+        }
+
+        .email {
+          background: url("../images/email_icon.png") no-repeat left center;
+        }
+
+        .phone {
+          background: url("../images/phone_icon.png") no-repeat left center;
+        }
+
+        .socialIcons {
+          margin-top: 30px;
+          font-family: SocialIco, sans-serif;
+          color: @lightColor;
+          font-size: 60px;
+          font-weight: 400;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+
+  .copy {
+    height: 26px;
+    text-align: center;
+    color: @darkColor;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    line-height: 26px;
+    background: @sectionLightBackColor;
+  }
+}
+
+.hidden{
+  opacity:0;
+}
+.visible{
+  opacity:1;
+}
