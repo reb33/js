@@ -38,16 +38,31 @@
         let fifthStar = document.getElementById('fifth');
 
         let goldenClass = 'golden';
+        let stars = [firstStar, secondStar, thirdStar, fourthStar, fifthStar];
 
-        firstStar.addEventListener('mouseover', function() {
-            if (!firstStar.classList.contains('goldenClass')) {
-                firstStar.classList.add(goldenClass);
-            }
-        });
+        for (let star of stars){
+            star.addEventListener('mouseover', function() {
+                if (!star.classList.contains('goldenClass')) {
+                    star.classList.add(goldenClass);
 
-        firstStar.addEventListener('mouseout', function() {
-            firstStar.classList.remove(goldenClass);
-        });
+                }
+                let prevStar = star.previousElementSibling;
+                if (prevStar && !prevStar.classList.contains('goldenClass')){
+                    prevStar.classList.add(goldenClass);
+                }
+            });
+
+            star.addEventListener('mouseout', function() {
+                star.classList.remove(goldenClass);
+
+                let prevStar = star.previousElementSibling;
+                if (prevStar){
+                    prevStar.classList.remove(goldenClass);
+                }
+            });
+        }
+
+        
     </script>
 </body>
 </html>

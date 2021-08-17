@@ -46,8 +46,14 @@
     <script>
 
         function closeClickHandler(event) {
-           
+            event.currentTarget.parentNode.style = 'display: none';
         }
+
+        let btns = document.querySelectorAll('button');
+        btns.forEach(function(btn){
+            btn.addEventListener('click', closeClickHandler);
+        });
+
     </script>
 </body>
 

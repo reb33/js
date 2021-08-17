@@ -19,6 +19,11 @@
     -->
 
     <script>
+        let span = document.querySelector('span');
+        let fromEl = document.getElementById('from');
+        fromEl.addEventListener('change', function(event){
+            span.innerText = event.target.value;
+        });
         
     </script>
 </body>

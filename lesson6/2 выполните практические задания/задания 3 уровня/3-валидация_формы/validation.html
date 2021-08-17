@@ -36,6 +36,22 @@
      -->
 
     <script>
+        let formEl = document.querySelector('form');
+        let inputFirst = document.querySelector('input#first');
+        let inputSecond = document.querySelector('input#second');
+        formEl.addEventListener('submit', function(event){
+            let isEmpty = false;
+            [inputFirst, inputSecond].forEach(i => {
+                i.style.borderColor = 'black';
+                if (! i.value){
+                    isEmpty = true;
+                    i.style.borderColor = 'red';
+                }
+            })
+            if (isEmpty){
+                event.preventDefault()
+            }
+        });
         
     </script>
 </body>
