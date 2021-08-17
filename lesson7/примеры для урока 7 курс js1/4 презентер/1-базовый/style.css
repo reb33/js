@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+}
+
+.section:nth-child(1) {
+    background: lightblue;
+}
+
+.section:nth-child(2) {
+    background: lightsalmon;
+}
+
+.fullimage {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+}
+
+.section:nth-child(3) {
+    background: lightgreen;
+}
+
+.section:nth-child(4) {
+    background: lightpink;
+}
